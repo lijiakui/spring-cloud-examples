@@ -1,0 +1,11 @@
+server:
+  port: 9000 #默认8080
+spring:
+  application:
+    name: spring-cloud-eureka
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/ #默认8761
