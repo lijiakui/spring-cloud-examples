@@ -3,10 +3,18 @@ server:
 spring:
   application:
     name: spring-cloud-consumer
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:9000/eureka/
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 feign:
   hystrix:
     enabled: true
+management:
+  security:
+    enabled: false

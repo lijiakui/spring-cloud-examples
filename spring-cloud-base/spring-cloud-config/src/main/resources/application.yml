@@ -1,5 +1,5 @@
 server:
-  port: 9010
+  port: 9011
 spring:
   application:
     name: spring-cloud-config
@@ -7,7 +7,19 @@ spring:
     config:
       server:
         git:
-          uri:
-          search-paths:
+          uri: https://github.com/lijiakui/spring-cloud-examples/
+          search-paths: spring-cloud-base/config-repo
           username:
           password:
+  rabbitmq:
+    host: localhost
+    port: 5692
+    username: guest
+    password: guest
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+management:
+  security:
+    enabled: false
